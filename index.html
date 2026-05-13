@@ -1,4 +1,5 @@
 
+
 html_content = '''<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -60,29 +61,41 @@ html_content = '''<!DOCTYPE html>
             font-size: 16px;
         }
 
-        /* 社交链接 */
-        .social {
+        /* 项目快捷入口 */
+        .quick-links {
             display: flex;
             gap: 12px;
             justify-content: center;
             margin-top: 24px;
+            flex-wrap: wrap;
         }
 
-        .social a {
+        .quick-links a {
             padding: 10px 20px;
             border-radius: 8px;
-            background: rgba(255,255,255,0.05);
-            color: #ccc;
+            background: rgba(102, 126, 234, 0.15);
+            color: #a29bfe;
             text-decoration: none;
             font-size: 14px;
             transition: all 0.2s;
-            border: 1px solid rgba(255,255,255,0.08);
+            border: 1px solid rgba(102, 126, 234, 0.2);
         }
 
-        .social a:hover {
-            background: rgba(102, 126, 234, 0.15);
+        .quick-links a:hover {
+            background: rgba(102, 126, 234, 0.25);
             color: #fff;
-            border-color: rgba(102, 126, 234, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .quick-links a.email {
+            background: rgba(255,255,255,0.05);
+            color: #ccc;
+            border-color: rgba(255,255,255,0.08);
+        }
+
+        .quick-links a.email:hover {
+            background: rgba(255,255,255,0.1);
+            color: #fff;
         }
 
         /* 项目 */
@@ -184,9 +197,11 @@ html_content = '''<!DOCTYPE html>
             <div class="avatar">P</div>
             <h1>Phey</h1>
             <p>全栈开发者 · 游戏创作者 · 正能量传播者</p>
-            <div class="social">
-                <a href="https://github.com/falk11" target="_blank">GitHub</a>
-                <a href="mailto:240784404@qq.com">Email</a>
+            <div class="quick-links">
+                <a href="https://falk11.github.io/CheerUp-Calendar/" target="_blank">项目 1</a>
+                <a href="#" target="_blank">项目 2</a>
+                <a href="#" target="_blank">项目 3</a>
+                <a href="mailto:240784404@qq.com" class="email">Email</a>
             </div>
         </div>
 
@@ -246,5 +261,5 @@ html_content = '''<!DOCTYPE html>
 with open('/mnt/agents/output/index.html', 'w', encoding='utf-8') as f:
     f.write(html_content)
 
-print("✅ 简洁版个人主页已保存")
+print("✅ 已更新：GitHub 按钮改为项目入口")
 print(f"📄 文件大小: {len(html_content)} 字符")
