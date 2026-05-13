@@ -9,7 +9,7 @@
 
 | Project | Description | Link |
 |---------|-------------|------|
-| 📅 CheerUp Calendar | Cross-platform calendar + memo app with voice reminders, custom music upload, and multilingual support | [Live Demo](https://fa1k11.github.io/calendar) |
+| 📅 CheerUp Calendar | Cross-platform calendar + memo app with voice reminders, custom music upload, and multilingual support | [Live Demo](https://github.com/falk11/CheerUp-Calendar/blob/main/cheerup-calendar.html) |
 
 ### Tech Stack
 `HTML5 Canvas` `JavaScript` `CSS3` `Web Audio API` `Web Speech API` `MIDI Synthesis` `Particle Effects`
