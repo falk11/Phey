@@ -1,10 +1,10 @@
 
 html_content = '''<!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phey - 全栈开发者</title>
+    <title>Phey - Full Stack Developer</title>
     <style>
         * {
             margin: 0;
@@ -26,7 +26,7 @@ html_content = '''<!DOCTYPE html>
             padding: 60px 24px;
         }
 
-        /* 头部 */
+        /* Header */
         .header {
             text-align: center;
             margin-bottom: 60px;
@@ -60,17 +60,15 @@ html_content = '''<!DOCTYPE html>
             font-size: 16px;
         }
 
-        /* 项目快捷入口 */
-        .quick-links {
+        /* Contact Button */
+        .contact {
             display: flex;
-            gap: 12px;
             justify-content: center;
             margin-top: 24px;
-            flex-wrap: wrap;
         }
 
-        .quick-links a {
-            padding: 10px 20px;
+        .contact a {
+            padding: 12px 28px;
             border-radius: 8px;
             background: rgba(102, 126, 234, 0.15);
             color: #a29bfe;
@@ -80,24 +78,13 @@ html_content = '''<!DOCTYPE html>
             border: 1px solid rgba(102, 126, 234, 0.2);
         }
 
-        .quick-links a:hover {
+        .contact a:hover {
             background: rgba(102, 126, 234, 0.25);
             color: #fff;
             transform: translateY(-2px);
         }
 
-        .quick-links a.email {
-            background: rgba(255,255,255,0.05);
-            color: #ccc;
-            border-color: rgba(255,255,255,0.08);
-        }
-
-        .quick-links a.email:hover {
-            background: rgba(255,255,255,0.1);
-            color: #fff;
-        }
-
-        /* 项目 */
+        /* Projects */
         .section {
             margin-bottom: 48px;
         }
@@ -164,7 +151,7 @@ html_content = '''<!DOCTYPE html>
             color: #00b894;
         }
 
-        /* 技术栈 */
+        /* Tech Stack */
         .tech-list {
             display: flex;
             gap: 12px;
@@ -180,7 +167,7 @@ html_content = '''<!DOCTYPE html>
             border: 1px solid rgba(255,255,255,0.05);
         }
 
-        /* 底部 */
+        /* Footer */
         .footer {
             text-align: center;
             padding-top: 40px;
@@ -195,21 +182,18 @@ html_content = '''<!DOCTYPE html>
         <div class="header">
             <div class="avatar">P</div>
             <h1>Phey</h1>
-            <p>全栈开发者 · 游戏创作者 · 正能量传播者</p>
-            <div class="quick-links">
-                <a href="https://falk11.github.io/CheerUp-Calendar/" target="_blank">项目 1</a>
-                <a href="#" target="_blank">项目 2</a>
-                <a href="#" target="_blank">项目 3</a>
-                <a href="mailto:240784404@qq.com" class="email">Email</a>
+            <p>Full Stack Developer · Game Creator · Positive Energy Spreader</p>
+            <div class="contact">
+                <a href="mailto:240784404@qq.com">Contact Email</a>
             </div>
         </div>
 
         <div class="section">
-            <h2>📦 项目</h2>
+            <h2>📦 Projects</h2>
             
             <a href="https://falk11.github.io/CheerUp-Calendar/" class="project" target="_blank">
                 <h3>📅 CheerUp Calendar</h3>
-                <p>跨平台日历 + 备忘录，语音提醒、自定义音乐、多语言支持</p>
+                <p>Cross-platform calendar + memo app with voice reminders, custom music upload, and multilingual support</p>
                 <div class="tags">
                     <span class="tag">Live Demo</span>
                     <span class="tag">PWA</span>
@@ -219,7 +203,7 @@ html_content = '''<!DOCTYPE html>
 
             <div class="project">
                 <h3>🎮 Happy Puppy</h3>
-                <p>正能量横版跑酷，纯 Canvas 绘制，零框架</p>
+                <p>Positive-energy side-scrolling runner, pure Canvas rendering, zero framework</p>
                 <div class="tags">
                     <span class="tag green">Coming Soon</span>
                     <span class="tag">Game</span>
@@ -229,7 +213,7 @@ html_content = '''<!DOCTYPE html>
 
             <div class="project">
                 <h3>🍻 Spin the Drink</h3>
-                <p>多人随机指定喝酒程序，转盘 + 抽签 + 骰子</p>
+                <p>Multiplayer random drinking picker with roulette, draw lots, and dice modes</p>
                 <div class="tags">
                     <span class="tag green">Coming Soon</span>
                     <span class="tag">Social</span>
@@ -239,7 +223,7 @@ html_content = '''<!DOCTYPE html>
         </div>
 
         <div class="section">
-            <h2>🛠 技术栈</h2>
+            <h2>🛠 Tech Stack</h2>
             <div class="tech-list">
                 <span class="tech-item">HTML5 Canvas</span>
                 <span class="tech-item">JavaScript</span>
@@ -260,5 +244,5 @@ html_content = '''<!DOCTYPE html>
 with open('/mnt/agents/output/index.html', 'w', encoding='utf-8') as f:
     f.write(html_content)
 
-print("✅ 已更新：GitHub 按钮改为项目入口")
+print("✅ 已更新：按钮显示 'Contact Email'，点击跳转邮箱")
 print(f"📄 文件大小: {len(html_content)} 字符")
